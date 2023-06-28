@@ -154,7 +154,7 @@ const controlAddRecipe = async function (newRecipe) {
      *  - pushState() - allow us to change the URL without reloading the page
      *  - pushState()- takes three arguments
      *  - 1st -> state or null
-     *  - 2nd -> title or '' (empty string) 
+     *  - 2nd -> title or '' (empty string)
      *  - 3rd -> URL (important argument)
      */
     // Change ID in the url
@@ -171,6 +171,10 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
+const newFeature = function () {
+  console.log('Welcome to application');
+};
+
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
@@ -179,7 +183,7 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
-  console.log('Welcome')
+  newFeature();
 };
 init();
 
